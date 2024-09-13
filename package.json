@@ -1,0 +1,14 @@
+{
+  "name": "line-trello-webhook",
+  "version": "1.0.0",
+  "description": "LINEからTrelloにカードを追加するWebhook",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  }
+}
