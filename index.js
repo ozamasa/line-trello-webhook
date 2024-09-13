@@ -28,11 +28,14 @@ const createTrelloCard = async (message) => {
 
     try {
         const url = `https://api.trello.com/1/cards`;
+        const today = new Date().toISOString();    // 今日の日付を取得してISO 8601形式に変換
         const params = {
             key: TRELLO_API_KEY,
             token: TRELLO_TOKEN,
             idList: LIST_ID,
             name: message, // LINEのコメントをカードの名前に
+            pos: 'top',
+            start: today
         };
         
         const response = await axios.post(url, {}, { params });
